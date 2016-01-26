@@ -11,8 +11,9 @@ RUN pip install flask-restful requests
 
 ADD . /app
 
-RUN R -e 'biocLite("clusterProfiler")'
-
 WORKDIR /app
+
+RUN R -f install.R
+
 
 CMD R CMD BATCH ./R/run.R
