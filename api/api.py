@@ -10,9 +10,8 @@ api = Api(app)
 
 # Routing
 api.add_resource(Status, '/')
-api.add_resource(Runner, '/generator')
+api.add_resource(Runner, '/analyze')
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True, port=3001, use_reloader=False)
-
+    app.run(host='0.0.0.0', debug=True, port=3000)

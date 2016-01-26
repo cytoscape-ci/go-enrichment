@@ -15,5 +15,4 @@ WORKDIR /app
 
 RUN R -f install.R
 
-
-CMD R CMD BATCH ./R/run.R
+CMD ["python", "./api/api.py"]
